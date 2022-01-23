@@ -68,4 +68,9 @@ QString showResult::getResultText(Test::Motive val)
     return " ";
 }
 
+void showResult::newFunc(int a)
+{
+
+}
+
 

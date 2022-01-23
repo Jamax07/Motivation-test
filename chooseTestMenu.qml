@@ -51,5 +51,8 @@ Item {
         height: chooseMenu.height
         visible: false
     }
+    Button{
+        visible: false
+    }
 
 }

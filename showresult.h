@@ -31,6 +31,7 @@ public slots:
     void addScore(int val);
     void getResult();
     QString getResultText(Test::Motive val);
+    void newFunc(int a);
 signals:
     void motiveResultSignal(QString val);
     void extraQuestionSignal(int motiveFirst,int motiveSecond);
