@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/pics/common">
+        <file>pics/mainMenu.jpg</file>
+        <file>pics/circleStart.png</file>
+        <file>pics/finish-button-png.png</file>
+    </qresource>
+    <qresource prefix="/new/motivTest2">
+        <file>pics/motivationTest/1stPic.png</file>
+        <file>pics/motivationTest/2ndpic.png</file>
+        <file>pics/motivationTest/3rdPic.png</file>
+        <file>pics/motivationTest/4thPic.png</file>
+        <file>pics/motivationTest/5sPic.png</file>
+        <file>pics/motivationTest/6sPic.png</file>
+    </qresource>
+</RCC>

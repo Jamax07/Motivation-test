@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ChooseTestMenu.qml</file>
+        <file>TestStart.qml</file>
+    </qresource>
+</RCC>
