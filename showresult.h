@@ -26,7 +26,7 @@ class showResult : public QObject
 public:
     explicit showResult(QObject *parent = nullptr);
 public slots:
-    void updateMotives(int val);
+    void updateScore(int val);
     void cleanMotives();
     void addScore(int val);
     void getResult();

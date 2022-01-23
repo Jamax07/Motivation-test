@@ -514,9 +514,9 @@ ColumnLayout{
                 if(childGroup.checkState ==Qt.PartiallyChecked &&childGroup2.checkState==Qt.PartiallyChecked
                         &&childGroup3.checkState==Qt.PartiallyChecked){
                     res.cleanMotives()
-                    res.updateMotives(childGroup.checkedButton.motive)
-                    res.updateMotives(childGroup2.checkedButton.motive)
-                    res.updateMotives(childGroup3.checkedButton.motive)
+                    res.updateScore(childGroup.checkedButton.motive)
+                    res.updateScore(childGroup2.checkedButton.motive)
+                    res.updateScore(childGroup3.checkedButton.motive)
                     res.getResult()
                 }
             }

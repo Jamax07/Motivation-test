@@ -7,7 +7,7 @@ showResult::showResult(QObject *parent) : QObject(parent),isFirstStart(true)
 
 }
 
-void showResult::updateMotives(int val)
+void showResult::updateScore(int val)
 {
     Test::Motive mtv = (Test::Motive)val;
     const QMap<Test::Motive,int> points = {
