@@ -317,9 +317,7 @@ StackLayout {
     ColumnLayout{
         id:ninethLayout
         visible: false
-        //anchors.fill: parent
         Text {
-            //anchors.centerIn: parent
             id: textResult
             font.pointSize: 15
             Connections{
