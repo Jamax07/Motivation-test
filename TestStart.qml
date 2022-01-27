@@ -9,209 +9,39 @@ StackLayout {
     id: mainLayout
     anchors.fill: parent
     currentIndex: 0
-    property var motiveData: ({[Test.External_motive]:[
-        "Мальчики (девочки) разговаривали о школе. Первый мальчик сказал:
-«Я хожу в школу потому, что меня мама заставляет.Если бы не мама,
-я бы в школу не ходил»."
-        ,"qrc:/new/motivTest2/pics/motivationTest/1stPic.png"],[Test.Educational_motive]:
-                              ["Второй мальчик (девочка) сказал: «Я хожу в школу потому,
- что мне нравится уроки делать. Даже если бы школы не было,
- я все равно бы учился».","qrc:/new/motivTest2/pics/motivationTest/2ndpic.png"],
-                              [Test.Game_motive]:["Третий мальчик сказал:
-«Я хожу в школу потому, что там весело и много ребят, с которыми можно поиграть».",
-                                  "qrc:/new/motivTest2/pics/motivationTest/3rdPic.png"],
-                              [Test.Positional_motive]:["Четвертый мальчик сказал:
-«Я хожу в школу потому, что хочу быть большим.
-Когда я в школе, я чувствую себя взрослым, а до школы я был маленьким».",
-                          "qrc:/new/motivTest2/pics/motivationTest/4thPic.png"],
-                                  [Test.Social_motive]:["Пятый мальчик (девочка) сказал:
-«Я хожу в школу потому, что нужно учиться. Без учения никакого дела не сделаешь,
-а выучишься — и можешь стать кем захочешь».",
-                          "qrc:/new/motivTest2/pics/motivationTest/5sPic.png"],
-                              [Test.Score_motive]:["Шестой мальчик сказал:
-«Я хожу в школу потому, что получаю там пятерки».",
-"qrc:/new/motivTest2/pics/motivationTest/6sPic.png"]})
+    PageOfStory{
+        txt: motiveData[0][0]
+        pathForPic: motiveData[0][1]
+        index: 1
+    }
+    PageOfStory{
+        txt: motiveData[1][0]
+        pathForPic: motiveData[1][1]
+        index: 2
+    }
+    PageOfStory{
+        txt: motiveData[2][0]
+        pathForPic: motiveData[2][1]
+        index: 3
+    }
+    PageOfStory{
+        txt: motiveData[3][0]
+        pathForPic: motiveData[3][1]
+        index: 4
+    }
+    PageOfStory{
+        txt: motiveData[4][0]
+        pathForPic: motiveData[4][1]
+        index: 5
+    }
+    PageOfStory{
+        txt: motiveData[5][0]
+        pathForPic: motiveData[5][1]
+        index: 6
+    }
 
-ColumnLayout{
-        id:firstLayout
-        spacing: 5
-        visible: true
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Мальчики (девочки) разговаривали о школе.
-Первый мальчик сказал: «Я хожу в школу потому,
-что меня мама заставляет.
-Если бы не мама, я бы в школу не ходил»."
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            visible: true
-            Image {
-                id: firstPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/1stPic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 1
-            }
-        }
-    }
-    ColumnLayout{
-        id:secondLayout
-        spacing: 5
-        visible: false
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Второй мальчик (девочка) сказал:
-«Я хожу в школу потому, что мне нравится уроки делать.
-Даже если бы школы не было, я все равно бы учился»."
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Image {
-                id: secondPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/2ndpic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 2
-            }
-        }
-    }
-    ColumnLayout{
-        id:thirdLayout
-        spacing: 5
-        visible: false
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Третий мальчик сказал:
-«Я хожу в школу потому, что там весело
-и много ребят, с которыми можно поиграть»."
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Image {
-                id: thirdPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/3rdPic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 3
-            }
-        }
-    }
-    ColumnLayout{
-        id:fourthLayout
-        spacing: 5
-        visible: false
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Четвертый мальчик сказал:
-«Я хожу в школу потому, что хочу быть большим.
- Когда я в школе, я чувствую себя взрослым,
- а до школы я был маленьким»."
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Image {
-                id: fourthPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/4thPic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 4
-            }
-        }
-    }
-    ColumnLayout{
-        id:fifthLayout
-        spacing: 5
-        visible: false
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Пятый мальчик (девочка) сказал:
-«Я хожу в школу потому, что нужно учиться.
-Без учения никакого дела не сделаешь,
-а выучишься — и можешь стать кем захочешь»"
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Image {
-                id: fifthPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/5sPic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 5
-            }
-        }
-    }
-    ColumnLayout{
-        id:sixthLayout
-        spacing: 5
-        visible: false
-        Text{
-            Layout.alignment: Qt.AlignTop|Qt.AlignCenter
-            text:"Шестой мальчик сказал:
-«Я хожу в школу потому, что получаю там пятерки»."
-            font.pointSize: 15
-        }
-        Rectangle{
-            Layout.alignment: Qt.AlignBottom
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Image {
-                id: sixthPic
-                source: "qrc:/new/motivTest2/pics/motivationTest/6sPic.png"
-                anchors.fill: parent
-            }
-        }
-        Button{
-            Layout.fillWidth: true
-            text: "NEXT"
-            onClicked: {
-                mainLayout.currentIndex = 6
-            }
-        }
-    }
     Item{
         id:seventhLayout
-        //spacing: 5
         visible: false
         Timer{
             id:timer
@@ -220,130 +50,46 @@ ColumnLayout{
                 mainLayout.currentIndex = 6
             }
         }
-        Button{
-            id:firstBackBtn
+
+        Component {
+            id: nameDelegate
+            Button{
+                id:backBtn
+                width: mainLayout.width/5
+                height: mainLayout.height/6
+                Image {
+                    anchors.fill: parent
+                    source: modelData.pathToPic
+                }
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        mainLayout.currentIndex=modelData.ind
+                        timer.start()
+                    }
+                }
+            }
+        }
+        Column{
             anchors.right: parent.right
             anchors.top: parent.top
-            anchors.margins: 5
-            width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleFirstPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/1stPic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=0
-                    timer.start()
-                }
-            }
-        }
-        Button{
-            id:secondBackBtn
-            anchors.left: firstBackBtn.left
-            anchors.top: firstBackBtn.bottom
-            anchors.topMargin: 20
-            width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleSecondPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/2ndpic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=1
-                    timer.start()
-                }
-            }
-        }
-        Button{
-            id:thirdBackBtn
-            anchors.left: secondBackBtn.left
-            anchors.top: secondBackBtn.bottom
-            anchors.topMargin: 20
-            width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleThirdPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/3rdPic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=2
-                    timer.start()
-                }
-            }
-        }
-        Button{
-            id:fourthBackBtn
-            anchors.left: fifthBackBtn.left
-            anchors.bottom: fifthBackBtn.top
-            anchors.bottomMargin: 20
-            width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleFourthPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/4thPic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=3
-                    timer.start()
-                }
-            }
-        }
-        Button{
-            id:fifthBackBtn
-            anchors.left: sixthBackBtn.left
-            anchors.bottom: sixthBackBtn.top
-            anchors.bottomMargin: 20
-            width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleFifthPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/5sPic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=4
-                    timer.start()
-                }
-            }
-        }
-        Button{
-            id:sixthBackBtn
-            anchors.left: firstBackBtn.left
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 5
             width: mainLayout.width/5
-            height: mainLayout.height/8
-            Image {
-                id:littleSixthPic
-                anchors.fill: parent
-                source: "qrc:/new/motivTest2/pics/motivationTest/6sPic.png"
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    mainLayout.currentIndex=5
-                    timer.start()
-                }
+            Repeater{
+                model: [
+                    { pathToPic: motiveData[0][1], ind: 0 },
+                    { pathToPic: motiveData[1][1], ind: 1 },
+                    { pathToPic: motiveData[2][1], ind: 2 },
+                    { pathToPic: motiveData[3][1], ind: 3 },
+                    { pathToPic: motiveData[4][1], ind: 4 },
+                    { pathToPic: motiveData[5][1], ind: 5 }
+                ]
+                delegate: nameDelegate
             }
         }
         Text{
             id:firstQuest
             anchors.top: parent.top
-            anchors.right: firstBackBtn.left
             anchors.rightMargin: 5
             text:"⦁	А как по-твоему, кто из них прав? Почему?"
             font.pointSize: parent.width/40
@@ -356,41 +102,21 @@ ColumnLayout{
                      id: childGroup
                      exclusive: true
                  }
-            CheckBox {
-                property int motive: Test.External_motive
-                checked: false
-                text: qsTr("First")
-                ButtonGroup.group: childGroup
-            }
-            CheckBox {
-                property int motive: Test.Educational_motive
-                checked: false
-                text: qsTr("Second")
-                ButtonGroup.group: childGroup
-            }
-            CheckBox {
-                property int motive: Test.Game_motive
-                checked: false
-                text: qsTr("Third")
-                ButtonGroup.group: childGroup
-            }
-            CheckBox {
-                property int motive: Test.Positional_motive
-                checked: false
-                text: qsTr("Fourth")
-                ButtonGroup.group: childGroup
-            }
-            CheckBox {
-                property int motive: Test.Social_motive
-                checked: false
-                text: qsTr("Fifth")
-                ButtonGroup.group: childGroup
-            }
-            CheckBox {
-                property int motive: Test.Score_motive
-                checked: false
-                text: qsTr("Sixth")
-                ButtonGroup.group: childGroup
+            Repeater{
+                model: [
+                    {enumMotive:Test.External_motive, txt: "First"},
+                    {enumMotive:Test.Educational_motive, txt: "Second"},
+                    {enumMotive:Test.Game_motive, txt: "Third"},
+                    {enumMotive:Test.Positional_motive, txt: "Fourth"},
+                    {enumMotive:Test.Social_motive, txt: "Fifth"},
+                    {enumMotive:Test.Score_motive, txt: "Sixth"}
+                ]
+                delegate: CheckBox {
+                    property int motive: modelData.enumMotive
+                    checked: false
+                    text: modelData.txt
+                    ButtonGroup.group: childGroup
+                }
             }
         }
         Text{
@@ -409,41 +135,21 @@ ColumnLayout{
                      id: childGroup2
                      exclusive: true
                  }
-            CheckBox {
-                property int motive: Test.External_motive
-                checked: false
-                text: qsTr("First")
-                ButtonGroup.group: childGroup2
-            }
-            CheckBox {
-                property int motive: Test.Educational_motive
-                checked: false
-                text: qsTr("Second")
-                ButtonGroup.group: childGroup2
-            }
-            CheckBox {
-                property int motive: Test.Game_motive
-                checked: false
-                text: qsTr("Third")
-                ButtonGroup.group: childGroup2
-            }
-            CheckBox {
-                property int motive: Test.Positional_motive
-                checked: false
-                text: qsTr("Fourth")
-                ButtonGroup.group: childGroup2
-            }
-            CheckBox {
-                property int motive: Test.Social_motive
-                checked: false
-                text: qsTr("Fifth")
-                ButtonGroup.group: childGroup2
-            }
-            CheckBox {
-                property int motive: Test.Score_motive
-                checked: false
-                text: qsTr("Sixth")
-                ButtonGroup.group: childGroup2
+            Repeater{
+                model: [
+                    {enumMotive:Test.External_motive, txt: "First"},
+                    {enumMotive:Test.Educational_motive, txt: "Second"},
+                    {enumMotive:Test.Game_motive, txt: "Third"},
+                    {enumMotive:Test.Positional_motive, txt: "Fourth"},
+                    {enumMotive:Test.Social_motive, txt: "Fifth"},
+                    {enumMotive:Test.Score_motive, txt: "Sixth"}
+                ]
+                delegate: CheckBox {
+                    property int motive: modelData.enumMotive
+                    checked: false
+                    text: modelData.txt
+                    ButtonGroup.group: childGroup2
+                }
             }
         }
         Text{
@@ -462,41 +168,21 @@ ColumnLayout{
                 id: childGroup3
                 exclusive: true
             }
-            CheckBox {
-                property int motive: Test.External_motive
-                checked: false
-                text: qsTr("First")
-                ButtonGroup.group: childGroup3
-            }
-            CheckBox {
-                property int motive: Test.Educational_motive
-                checked: false
-                text: qsTr("Second")
-                ButtonGroup.group: childGroup3
-            }
-            CheckBox {
-                property int motive: Test.Game_motive
-                checked: false
-                text: qsTr("Third")
-                ButtonGroup.group: childGroup3
-            }
-            CheckBox {
-                property int motive: Test.Positional_motive
-                checked: false
-                text: qsTr("Fourth")
-                ButtonGroup.group: childGroup3
-            }
-            CheckBox {
-                property int motive: Test.Social_motive
-                checked: false
-                text: qsTr("Fifth")
-                ButtonGroup.group: childGroup3
-            }
-            CheckBox {
-                property int motive: Test.Score_motive
-                checked: false
-                text: qsTr("Sixth")
-                ButtonGroup.group: childGroup3
+            Repeater{
+                model: [
+                    {enumMotive:Test.External_motive, txt: "First"},
+                    {enumMotive:Test.Educational_motive, txt: "Second"},
+                    {enumMotive:Test.Game_motive, txt: "Third"},
+                    {enumMotive:Test.Positional_motive, txt: "Fourth"},
+                    {enumMotive:Test.Social_motive, txt: "Fifth"},
+                    {enumMotive:Test.Score_motive, txt: "Sixth"}
+                ]
+                delegate: CheckBox {
+                    property int motive: modelData.enumMotive
+                    checked: false
+                    text: modelData.txt
+                    ButtonGroup.group: childGroup3
+                }
             }
         }
         Button{
@@ -631,9 +317,9 @@ ColumnLayout{
     ColumnLayout{
         id:ninethLayout
         visible: false
-        anchors.fill: parent
+        //anchors.fill: parent
         Text {
-            anchors.centerIn: parent
+            //anchors.centerIn: parent
             id: textResult
             font.pointSize: 15
             Connections{

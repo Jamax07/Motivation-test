@@ -12,4 +12,5 @@
         <file>pics/motivationTest/5sPic.png</file>
         <file>pics/motivationTest/6sPic.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

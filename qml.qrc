@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>ChooseTestMenu.qml</file>
         <file>TestStart.qml</file>
+        <file>PageOfStory.qml</file>
     </qresource>
 </RCC>
